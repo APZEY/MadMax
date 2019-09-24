@@ -6,8 +6,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 
+
 public class Files {
 
+	private BufferedReader buf;
 		
 	
 	public String lireFichierSimple(String path) {
@@ -29,11 +31,11 @@ public class Files {
 		return txtFile;
 	}
 	
-	
+	//ouvre le fichier
 		 public static void OpenFile(String[] arg) throws IOException {
 				JFileChooser dialogue = new JFileChooser(new File("."));
 				File fichier;
-				
+	//attribuer le document ouvert à la variable fichier 			
 				if (dialogue.showOpenDialog(null)== 
 				    JFileChooser.APPROVE_OPTION) {
 				    fichier = dialogue.getSelectedFile();
